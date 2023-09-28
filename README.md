@@ -1,6 +1,6 @@
 # insta_clone
 
-A new Flutter project.
+Trying to make a Instagram Clone app using Flutter/Firebase
 
 ## Getting Started
 
