@@ -6,6 +6,7 @@ import 'package:insta_clone/models/user.dart' as model;
 import 'package:insta_clone/providers/user_provider.dart';
 import 'package:insta_clone/screens/login_screen.dart';
 import 'package:insta_clone/utils/colors.dart';
+import 'package:insta_clone/utils/global_variable.dart';
 import 'package:provider/provider.dart';
 
 class MobileScreenLayout extends StatefulWidget {
@@ -45,17 +46,10 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
     model.User user = Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       body: PageView(
-        controller: _pageController,
-        onPageChanged: onPagechange,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          Text("1"),
-          Text("2"),
-          Text("3"),
-          Text("4"),
-          Text("5"),
-        ],
-      ),
+          controller: _pageController,
+          onPageChanged: onPagechange,
+          physics: const NeverScrollableScrollPhysics(),
+          children: homeScreenItems),
       bottomNavigationBar: CupertinoTabBar(
           onTap: navigationTapper,
           backgroundColor: mobileBackgroundColor,
